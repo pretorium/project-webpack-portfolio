@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:prod": "webpack --config webpack.config.js",
+    "build:prod": "node ./scripts/create-env.js && webpack --config webpack.config.js",
     "build": "webpack --config webpack.config.dev.js",
     "start": "npm run build && cd dist && live-server --port=3001 --entry-file=index.html"
   },
