@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:prod": "node ./scripts/create-env.js && webpack --config webpack.config.js",
     "build": "webpack --config webpack.config.dev.js",
-    "start": "npm run build && cd dist && live-server --port=3001 --entry-file=index.html"
+    "start": "webpack serve --config webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "terser-webpack-plugin": "^5.1.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.26.0",
-    "webpack-cli": "^4.5.0"
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }

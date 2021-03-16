@@ -9,8 +9,6 @@ module.exports = {
   /** Le pasamos explicitamente el modo desde el archivo */
   mode: 'development',
 
-  watch: true,
-
   /** El punto de entrada de mi aplicación */
   entry: './src/index.js',
 
@@ -117,6 +115,12 @@ module.exports = {
     }),
     new Dotenv(),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    historyApiFallback: true,
+    port: 3000,
+  }
 };
 
 /**
